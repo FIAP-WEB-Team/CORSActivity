@@ -1,0 +1,14 @@
+
+<h1>Voos Disponíveis:</h1>
+<p>Aqui voce verá todos os nossos voos disponíveis</p>
+<div *ngFor="let flight of flightList;  let i = index">
+  <div class="custom-div" (click)="selectedDiv(i)" [ngClass]="{'selected': selectedFlights[i]}">
+    <h2>{{flight.departure}}     <i class="material-icons">flight_takeoff</i>    {{flight.arrival}}</h2>
+    <h4>{{flight.price|currency:'BRL'}}</h4>
+    <h3>{{flight.departureDate}}</h3>
+  </div>
+</div>
+
+
+
+
